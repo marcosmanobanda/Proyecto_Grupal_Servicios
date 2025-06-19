@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>332</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema Gestión de Servicios</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lblTitulo">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Soluciones PC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txtCliente">
+      <property name="placeholderText">
+       <string>Nombre del cliente</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txtServicio">
+      <property name="placeholderText">
+       <string>Descripción del servicio</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="comboConSeleccion">
+      <item>
+       <widget class="QComboBox" name="cmbCosto">
+        <item>
+         <property name="text">
+          <string>Seleccionar</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>30.00</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>50.00</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>80.00</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>120.00</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cmbFormaPago">
+        <item>
+         <property name="text">
+          <string>Seleccionar</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Efectivo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tarjeta de crédito</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tarjeta de débito</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Transferencia bancaria</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pago móvil</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="botonesLayout">
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLimpiar">
+        <property name="text">
+         <string>Limpiar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSalir">
+        <property name="text">
+         <string>Salir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tblServicios">
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Cliente</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Servicio</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Costo</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Forma de Pago</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
