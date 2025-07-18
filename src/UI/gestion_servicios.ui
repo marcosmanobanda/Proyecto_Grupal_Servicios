@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>332</width>
+    <width>649</width>
     <height>360</height>
    </rect>
   </property>
@@ -30,6 +30,37 @@
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="cedulaLayout">
+      <item>
+       <widget class="QLabel" name="lblCedula">
+        <property name="text">
+         <string>Cédula:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txtCedula">
+        <property name="maxLength">
+         <number>10</number>
+        </property>
+        <property name="placeholderText">
+         <string>Ingrese cédula (10 dígitos)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBuscar">
+        <property name="toolTip">
+         <string>Buscar por cédula</string>
+        </property>
+        <property name="text">
+         <string>🔍</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLineEdit" name="txtCliente">

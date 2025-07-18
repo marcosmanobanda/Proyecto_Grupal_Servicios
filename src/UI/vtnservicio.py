@@ -1,4 +1,5 @@
 from PySide6.QtCore import Qt, QMetaObject
+from PySide6.QtGui import QIntValidator
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QLineEdit, QComboBox,
     QHBoxLayout, QPushButton, QTableWidget, QTableWidgetItem
@@ -19,6 +20,20 @@ class Ui_MainWindow:
         self.lblTitulo.setFont(font)
         self.lblTitulo.setAlignment(Qt.AlignCenter)
         self.verticalLayout.addWidget(self.lblTitulo)
+
+        self.cedulaLayout = QHBoxLayout()
+
+        self.txtCedula = QLineEdit()
+        self.txtCedula.setPlaceholderText("Ingrese cédula (10 dígitos)")
+        self.txtCedula.setMaxLength(10)
+        self.txtCedula.setValidator(QIntValidator(0, 1234567890))
+        self.verticalLayout.addWidget(self.txtCedula)
+
+        self.btnBuscar = QPushButton("🔍")
+        self.btnBuscar.setToolTip("Buscar por cédula")
+        self.cedulaLayout.addWidget(self.btnBuscar)
+
+        self.verticalLayout.addLayout(self.cedulaLayout)
 
         self.txtCliente = QLineEdit()
         self.txtCliente.setPlaceholderText("Nombre del cliente")
@@ -49,8 +64,8 @@ class Ui_MainWindow:
         self.verticalLayout.addLayout(self.botonesLayout)
 
         self.tblServicios = QTableWidget()
-        self.tblServicios.setColumnCount(4)
-        self.tblServicios.setHorizontalHeaderLabels(["Cliente", "Servicio", "Costo", "Forma de Pago"])
+        self.tblServicios.setColumnCount(5)
+        self.tblServicios.setHorizontalHeaderLabels(["Cédula", "Cliente", "Servicio", "Costo", "Forma de Pago"])
         self.verticalLayout.addWidget(self.tblServicios)
 
         MainWindow.setCentralWidget(self.centralwidget)
